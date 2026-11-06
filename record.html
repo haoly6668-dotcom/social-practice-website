@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="“码上启航”实践队上海、宁波十站活动纪实，通过互动地图、时间线和图文记录呈现港城实践足迹。"
+    >
+    <title>活动纪实｜沪甬双城十站足迹</title>
+    <link rel="stylesheet" href="./css/site.css">
+    <link rel="stylesheet" href="./css/record.css">
+
+    <script>
+        window._AMapSecurityConfig = {
+            securityJsCode: "4fb43bad2ec967a5b6716a4398c12650"
+        };
+    </script>
+    <script src="https://webapi.amap.com/loader.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#mainContent">跳到主要内容</a>
+
+<header class="site-header">
+    <div class="site-nav-wrap">
+        <a class="site-logo" href="./index.html" aria-label="返回网站首页">
+            <span class="site-logo-mark">实践</span>
+            <span class="site-logo-copy"><strong>社会实践成果展示</strong><span>Social Practice</span></span>
+        </a>
+        <nav class="site-nav" id="siteNav" aria-label="主要导航">
+            <a class="site-nav-link" href="./index.html">首页</a>
+            <a class="site-nav-link" href="./team.html">队伍介绍</a>
+            <a class="site-nav-link" href="./video.html">视频成果</a>
+            <a class="site-nav-link is-active" href="./record.html" aria-current="page">活动纪实</a>
+            <a class="site-nav-link" href="./achievement.html">实践总结</a>
+        </nav>
+        <button class="site-menu-button" type="button" aria-label="打开导航菜单" aria-controls="siteNav" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+</header>
+
+<main id="mainContent">
+    <section class="journal-hero" aria-labelledby="journalTitle">
+        <div class="container journal-hero-grid">
+            <div class="journal-hero-copy hero-sequence">
+
+                <h1 id="journalTitle">双城十站<br><em>实践足迹</em></h1>
+                <p>
+                    从长江口到东海之滨，以真实城市为空间课堂；
+                    用地图连接坐标，用文字保存现场，用思考理解港城。
+                </p>
+                <a class="button is-light" href="#mapSection">打开实践地图 <span class="button-arrow" aria-hidden="true">↓</span></a>
+            </div>
+            <div class="journal-route" aria-label="上海至宁波实践路线" data-reveal="scale">
+                <div class="journal-city"><span>01</span><strong>上海</strong><small>3 个点位</small></div>
+                <div class="journal-line"><i></i><b>300+ km</b><i></i></div>
+                <div class="journal-city is-right"><span>02</span><strong>宁波</strong><small>7 个点位</small></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section" id="mapSection" aria-labelledby="mapTitle">
+        <div class="container">
+            <div class="map-heading reveal">
+                <div>
+
+                    <h2 id="mapTitle">上海 · 宁波实践数字地图</h2>
+                    <p>选择城市或任意地点，在地图与详情之间查看十站实践记录。</p>
+                </div>
+                <div class="filter-bar" role="group" aria-label="按城市筛选实践点位">
+                    <button class="filter-button is-active" type="button" data-filter="全部" aria-pressed="true">全部</button>
+                    <button class="filter-button" type="button" data-filter="上海" aria-pressed="false">上海</button>
+                    <button class="filter-button" type="button" data-filter="宁波" aria-pressed="false">宁波</button>
+                </div>
+            </div>
+
+            <div class="map-layout" data-reveal="scale">
+                <div class="map-area">
+                    <div id="practiceMap" aria-label="上海至宁波十站实践互动地图"></div>
+                    <div class="map-badge"><span>实践路线</span><strong>上海 → 宁波</strong><small>选择蓝色编号查看地点</small></div>
+                    <div class="map-error" id="mapError" role="status">
+                        <div><span>地图离线</span><h3>地图暂未加载</h3><p id="mapErrorText">请检查网络连接。下方十站选择器与地点详情仍可正常浏览。</p></div>
+                    </div>
+                </div>
+
+                <aside class="detail-panel" aria-live="polite">
+                    <div class="detail-topline"><span id="detailCity">上海</span><b id="detailIndex">SHANGHAI · 01</b></div>
+                    <h3 id="detailTitle">吴淞炮台湾国家湿地公园</h3>
+                    <p class="detail-address" id="detailAddress">上海市宝山区塘后路206号</p>
+                    <div class="place-visual" id="detailVisual" aria-label="地点现场照片待补充"></div>
+                    <div class="detail-block"><span>现场记录</span><p id="detailDescription"></p></div>
+                    <div class="detail-block is-reflection"><span>实践思考</span><p id="detailReflection"></p></div>
+                    <div class="detail-navigation">
+                        <button id="prevStop" type="button">← 上一站</button>
+                        <span id="detailCount">01 / 10</span>
+                        <button id="nextStop" type="button">下一站 →</button>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="embedded-timeline" aria-labelledby="timelineTitle" data-reveal="up">
+                <div class="embedded-timeline-heading">
+                    <div>
+
+                        <h3 id="timelineTitle">选择十站坐标</h3>
+                    </div>
+                    <p>点击地点切换地图与右侧详情</p>
+                </div>
+                <div class="timeline" id="timeline"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer-grid">
+            <div><h3>“码上启航”实践队</h3><p>上海海事大学</p><p>千企百港社会实践成果展示平台</p></div>
+            <div class="site-footer-links"><h4>快速导航</h4><a href="./team.html">队伍介绍</a><a href="./video.html">视频成果</a><a href="./record.html">活动纪实</a><a href="./achievement.html">实践总结</a></div>
+            <div><h4>社会实践</h4><p>实践年份：2026</p><p>实践主题：沪甬联航·码上启航——从港航文脉到智港未来的港城实践调研</p></div>
+        </div>
+        <div class="site-copyright"><p>© 2026 上海海事大学 · “码上启航”实践队 All Rights Reserved.</p></div>
+    </div>
+</footer>
+
+<script src="./js/site.js"></script>
+<script src="./js/record.js"></script>
+</body>
+</html>
