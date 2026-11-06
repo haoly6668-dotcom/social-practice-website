@@ -1,0 +1,409 @@
+.video-hero {
+    position: relative;
+    min-height: 590px;
+    padding: 132px 0 82px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: var(--white);
+    background:
+        radial-gradient(circle at 84% 50%, rgba(22, 135, 189, 0.24), transparent 31%),
+        var(--navy-950);
+}
+
+.video-hero::before {
+    position: absolute;
+    inset: 0;
+    opacity: 0.16;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 62px 62px;
+    mask-image: linear-gradient(to right, black, transparent 78%);
+    content: "";
+}
+
+.video-hero::after {
+    position: absolute;
+    top: 50%;
+    right: -120px;
+    width: 470px;
+    height: 470px;
+    border: 1px solid rgba(66, 200, 233, 0.15);
+    border-radius: 50%;
+    box-shadow: 0 0 0 70px rgba(66, 200, 233, 0.03), 0 0 0 140px rgba(66, 200, 233, 0.02);
+    content: "";
+    transform: translateY(-50%);
+}
+
+.video-hero-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.video-kicker {
+    color: var(--cyan-200);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.25em;
+}
+
+.video-hero h1 {
+    margin-top: 20px;
+    font-size: clamp(50px, 7vw, 84px);
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+}
+
+.video-hero h1 em {
+    color: var(--cyan-200);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.video-hero p {
+    max-width: 650px;
+    margin-top: 24px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+}
+
+.video-scroll {
+    margin-top: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.video-scroll span {
+    color: var(--cyan-200);
+    font-size: 20px;
+}
+
+.video-hero-count {
+    position: absolute;
+    right: max(7vw, 60px);
+    bottom: 70px;
+    z-index: 1;
+    text-align: right;
+}
+
+.video-hero-count strong {
+    display: block;
+    color: rgba(169, 233, 247, 0.16);
+    font-family: Georgia, serif;
+    font-size: 132px;
+    font-weight: 500;
+    line-height: 0.72;
+}
+
+.video-hero-count span {
+    color: var(--cyan-200);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+}
+
+.screening-section {
+    padding: 112px 0;
+    background: var(--white);
+}
+
+.featured-video {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(310px, 0.7fr);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.featured-player {
+    background: var(--navy-950);
+}
+
+.featured-player video {
+    width: 100%;
+    height: 100%;
+    min-height: 460px;
+    object-fit: cover;
+}
+
+.featured-copy {
+    padding: 42px 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.film-index {
+    margin-bottom: 30px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--ink-500);
+    border-bottom: 1px solid var(--line);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.film-category {
+    color: var(--blue-600);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.featured-copy h3 {
+    margin: 10px 0 16px;
+    color: var(--navy-900);
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.4;
+}
+
+.featured-copy p {
+    color: var(--ink-700);
+    font-size: 14px;
+}
+
+.film-note {
+    margin-top: 34px;
+    color: var(--ink-400);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.17em;
+}
+
+.film-collection {
+    padding: 112px 0;
+    background: var(--paper);
+}
+
+.collection-heading {
+    margin-bottom: 44px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.collection-heading h2 {
+    margin-top: 12px;
+    color: var(--navy-900);
+    font-size: clamp(31px, 4vw, 46px);
+}
+
+.collection-heading > p {
+    max-width: 390px;
+    color: var(--ink-500);
+    font-size: 14px;
+}
+
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.film-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    box-shadow: 0 10px 30px rgba(3, 30, 56, 0.05);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.3s ease;
+}
+
+.film-card.is-playing,
+.featured-video.is-playing {
+    border-color: var(--cyan-400);
+    box-shadow: 0 24px 58px rgba(15, 107, 165, 0.2);
+}
+
+.film-card.is-playing::after,
+.featured-video.is-playing::after {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 4;
+    padding: 5px 9px;
+    color: var(--navy-950);
+    border-radius: 20px;
+    background: var(--cyan-200);
+    content: "正在播放";
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    pointer-events: none;
+}
+
+.film-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-7px);
+}
+
+.film-player {
+    position: relative;
+    background: var(--navy-950);
+}
+
+.film-player video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    clip-path: inset(0 round 0);
+    transform: scale(1);
+    transition: transform 0.65s ease, clip-path 0.65s ease;
+}
+
+.motion-ready [data-reveal="up"].is-waiting .film-player video {
+    clip-path: inset(4% round 10px);
+    transform: scale(1.025);
+}
+
+.film-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 37px;
+    height: 37px;
+    display: grid;
+    place-items: center;
+    color: var(--navy-900);
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 50%;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.film-card-body {
+    padding: 28px 29px 31px;
+}
+
+.film-card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--blue-600);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.film-card-meta time {
+    color: var(--ink-400);
+}
+
+.film-card h3 {
+    margin: 11px 0 12px;
+    color: var(--navy-900);
+    font-size: 22px;
+}
+
+.film-card p {
+    color: var(--ink-500);
+    font-size: 13px;
+}
+
+.collection-next {
+    margin-top: 34px;
+    padding-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    color: var(--ink-500);
+    border-top: 1px solid var(--line-strong);
+    font-size: 13px;
+}
+
+.collection-next a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--blue-600);
+    font-weight: 800;
+}
+
+.collection-next b {
+    font-size: 18px;
+    transition: transform 0.25s ease;
+}
+
+.collection-next a:hover b {
+    transform: translateX(5px);
+}
+
+@media (max-width: 980px) {
+    .featured-video {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-player video {
+        min-height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .video-hero-count {
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 768px) {
+    .video-hero {
+        min-height: 520px;
+        padding: 112px 0 80px;
+    }
+
+    .video-hero-count {
+        right: 22px;
+        bottom: 55px;
+    }
+
+    .video-hero-count strong {
+        font-size: 88px;
+    }
+
+    .screening-section,
+    .film-collection {
+        padding: 82px 0;
+    }
+
+    .featured-copy {
+        padding: 32px 25px;
+    }
+
+    .collection-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .film-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    .video-hero-count {
+        display: none;
+    }
+
+    .film-card-body {
+        padding: 24px 21px 27px;
+    }
+
+    .collection-next {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
